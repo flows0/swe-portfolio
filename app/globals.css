@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #B1F8F2;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-primary: var(--primary);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand950: #F2F2F3;
+  --color-brand900: #E6E5E6;
+  --color-brand800: #CDCACE;
+  --color-brand700: #B3B0B5;
+  --color-brand600: #9A969C;
+  --color-brand500: #817C83;
+  --color-brand400: #676369;
+  --color-brand300: #4D4A4F;
+  --color-brand200: #343135;
+  --color-brand100: #1A191A;
+  --color-brand50: #090909;
+
+  --text-h1: 61px;
+  --text-h1--line-height: 70px;
+  --text-h2: 49px;
+  --text-h2--line-height: 56px;
+  --text-h3: 39px;
+  --text-h3--line-height: 45px;
+  --text-h4: 31px;
+  --text-h4--line-height: 36px;
+  --text-h5: 25px;
+  --text-h5--line-height: 29px;
+  --text-h6: 20px;
+  --text-h6--line-height: 23px;
+  --text-p: 16px;
+  --text-p--line-height: 26px;
+  --text-small: 13px;
+  --text-small--line-height: 21px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #1A191A;
+  color: #F2F2F3;
   font-family: Arial, Helvetica, sans-serif;
 }
