@@ -12,9 +12,7 @@ export default function Projects() {
           A selection of projects that showcase my skills in building scalable and impactful web solutions.
         </p>
       </div>
-      <div>
-        <ProjectGrid />
-      </div>
+      <ProjectGrid />
     </SectionContainer>
   );
 }
