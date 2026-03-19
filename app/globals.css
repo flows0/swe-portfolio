@@ -6,6 +6,7 @@
 
 @theme inline {
   --color-primary: var(--primary);
+  --color-building: #E0B1F8;
 
   --color-brand950: #F2F2F3;
   --color-brand900: #E6E5E6;
