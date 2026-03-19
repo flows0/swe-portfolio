@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <SectionContainer id="projects">
       <div>
-        <h2 className="text-brand950 text-h5 font-bold sm:text-h2">
+        <h2 className="text-brand950 text-h4 font-bold sm:text-h2">
           Featured Projects
         </h2>
         <p className="text-brand800 text-p mt-4 max-w-120">
