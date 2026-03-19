@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-export default function SectionContainer({ children }: { children: ReactNode }) {
+export default function SectionContainer({ children, id }: { children: ReactNode, id?: string }) {
   return (
-    <div className="mt-48 px-6">
+    <div id={id} className="mt-48 px-4 scroll-mt-48">
       {children}
     </div>
   );
