@@ -3,21 +3,23 @@
 import Link from "next/link";
 import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 import { LuFileText } from "react-icons/lu";
+import { RefObject } from "react";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
 import { navLinks } from "./Navbar";
 
 type MobileMenuProps = {
   isOpen: boolean;
   onClose: () => void;
+  menuRef: RefObject<HTMLDivElement | null>;
 };
 
-export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps) {
   useLockBodyScroll(isOpen);
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed left-4 right-4 top-25 px-6 py-6 rounded-2xl border backdrop-blur-lg shadow-2xl bg-brand100/80 border-brand200 shadow-brand100">
+    <div ref={menuRef} className="fixed left-4 right-4 top-25 px-6 py-6 rounded-2xl border backdrop-blur-lg shadow-2xl bg-brand100/80 border-brand200 shadow-brand100">
       <div
         className="flex flex-col gap-y-1"
         role="menu"
