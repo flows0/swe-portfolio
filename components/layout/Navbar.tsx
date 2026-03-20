@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { LuFileText, LuMenu, LuX } from "react-icons/lu";
 import MobileMenu from "./MobileMenu";
 import { useDismissInteraction } from "@/hooks/useDismissInteraction";
+import { getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
 
 export const navLinks = [
   { href: "/#home", label: "Home" },
@@ -18,6 +19,9 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
+
+  const sectionHrefs = useMemo(() => navLinks.map(({ href }) => href), []);
+  const { activeSectionId } = useScrollSpy({ sectionHrefs, activeSectionOffsetPx: 250, enabled: true });
 
   useDismissInteraction({
     isActive: menuOpen,
@@ -34,9 +38,17 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop: Nav Links */}
-          <div className="hidden items-center md:flex">
+          <div className="hidden items-center gap-x-1 md:flex">
             {navLinks.map(({ href, label }) => (
-              <Link key={href} href={href} className="text-p px-3 py-2 rounded-xl text-brand600 hover:bg-brand200/50">
+              <Link
+                key={href}
+                href={href}
+                className={`transition-colors duration-300 ease-in-out ${
+                  activeSectionId === getSectionIdFromHref(href)
+                    ? "text-p px-3 py-2 rounded-xl bg-primary/20 text-primary ring-1 ring-primary/40"
+                    : "text-p px-3 py-2 rounded-xl text-brand600 hover:bg-brand200/50"
+                }`}
+              >
                 {label}
               </Link>
             ))}

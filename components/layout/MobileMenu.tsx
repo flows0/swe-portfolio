@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 import { LuFileText } from "react-icons/lu";
-import { RefObject } from "react";
+import { RefObject, useMemo } from "react";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
 import { navLinks } from "./Navbar";
+import { getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -15,6 +16,13 @@ type MobileMenuProps = {
 
 export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps) {
   useLockBodyScroll(isOpen);
+
+  const sectionHrefs = useMemo(() => navLinks.map(({ href }) => href), []);
+  const { activeSectionId } = useScrollSpy({
+    sectionHrefs,
+    activeSectionOffsetPx: 250,
+    enabled: isOpen,
+  });
 
   if (!isOpen) return null;
 
@@ -29,7 +37,11 @@ export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps
             key={href}
             href={href}
             onClick={onClose}
-            className="text-p py-1 px-3 w-fit rounded-lg text-brand600 hover:bg-brand200"
+            className={
+              activeSectionId === getSectionIdFromHref(href)
+                ? "text-p py-1 px-3 w-fit rounded-lg bg-primary/20 text-primary ring-1 ring-primary/40"
+                : "text-p py-1 px-3 w-fit rounded-lg text-brand600 hover:bg-brand200"
+            }
             role="menuitem"
           >
             {label}
