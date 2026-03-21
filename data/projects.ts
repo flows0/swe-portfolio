@@ -24,7 +24,7 @@ export const projects: Project[] = [
     title: "Field Service Management Platform",
     desc: "Built a full-stack field service platform to streamline dispatching, scheduling, CRM, and payments, replacing third-party tools with a faster, more intuitive system for office staff and technicians.",
     status: "building",
-    techStack: ['TypeScript', 'Next.js', 'Axios', 'Tailwind CSS', 'Express', 'PostgreSQL', 'Prisma ORM', 'Node.js', 'Stripe', 'Twilio Messaging API'],
+    techStack: ['TypeScript', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Express', 'PostgreSQL', 'Prisma ORM', 'Node.js', 'Stripe', 'Twilio Messaging API'],
     // liveUrl: "",
     githubUrl: "https://github.com/flowz0/d-enterprise-suite"
   },
