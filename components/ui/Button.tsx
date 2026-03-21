@@ -2,16 +2,20 @@ import Link from "next/link";
 import { ReactNode } from "react";
 
 type ButtonVariant = 'primary' | 'secondary';
+type RoundedVariant = 'lg' | 'full';
+type SizeVariant= 'sm' | 'md';
 
 type ButtonProps = {
   children: ReactNode;
   variant?: ButtonVariant;
+  rounded?: RoundedVariant;
+  size?: SizeVariant;
   href?: string;
   target?: string;
   className?: string;
 };
 
-const baseStyle = "flex items-center justify-center text-center gap-x-2 py-3 px-4 rounded-lg w-1/2 border transition-colors duration-300 ease-in-out sm:w-fit sm:px-6";
+const baseStyle = "flex items-center justify-center text-center gap-x-2 border cursor-pointer transition-colors duration-300 ease-in-out";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
@@ -20,14 +24,26 @@ const variantStyles: Record<ButtonVariant, string> = {
     "bg-brand200/20 text-brand600 border-brand200/80 hover:bg-brand200 hover:text-brand800 hover:border-brand300"
 };
 
+const borderStyle: Record<RoundedVariant, string> = {
+  lg: "rounded-lg",
+  full: "rounded-full"
+};
+
+const sizeStyle: Record<SizeVariant, string> = {
+  sm: "py-1 px-3",
+  md: "py-3 px-4"
+};
+
 export default function Button({
   children,
   variant = "primary",
   href,
   target,
+  rounded = "lg",
+  size = "md",
   className,
 }: ButtonProps) {
-  const classes = `${baseStyle} ${variantStyles[variant]} ${className}`.trim();
+  const classes = `${baseStyle} ${variantStyles[variant]} ${borderStyle[rounded]} ${sizeStyle[size]} ${className}`.trim();
 
   if (href) {
     return (
