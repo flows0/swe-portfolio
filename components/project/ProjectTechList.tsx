@@ -1,14 +1,11 @@
 import ProjectTechCard from "./ProjectTechCard";
 
-export default function ProjectTechList() {
+export default function ProjectTechList({ techStack }: { techStack: string[] }) {
   return (
     <div className="mt-4 flex flex-wrap gap-2">
-      <ProjectTechCard label="TypeScript" />
-      <ProjectTechCard label="Next.js" />
-      <ProjectTechCard label="Tailwind CSS" />
-      <ProjectTechCard label="Express" />
-      <ProjectTechCard label="MongoDB" />
-      <ProjectTechCard label="+5 more" />
+      {techStack.map((tech, index) => (
+        <ProjectTechCard key={index} label={tech} />
+      ))}
     </div>
   );
 }
