@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "HVAC Blog Content Management System",
     desc: "Designed and built a full-stack CMS for an HVAC blog. Enabling efficient content creation, editing, and publishing through a custom admin dashboard.",
     status: "live",
-    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Express', 'MongoDB', '+5 more'],
+    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Express', 'MongoDB'],
     liveUrl: "https://www.ductdaddykc.com/blog",
     githubUrl: "https://github.com/flowz0/dd-platform"
   },
@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: "HVAC Blog Content Management System",
     desc: "Designed and built a full-stack CMS for an HVAC blog. Enabling efficient content creation, editing, and publishing through a custom admin dashboard.",
     status: "live",
-    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Express', 'MongoDB', '+5 more'],
+    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Express', 'MongoDB'],
     liveUrl: "https://www.ductdaddykc.com/blog",
     githubUrl: "https://github.com/flowz0/dd-platform"
   },
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     title: "HVAC Blog Content Management System",
     desc: "Designed and built a full-stack CMS for an HVAC blog. Enabling efficient content creation, editing, and publishing through a custom admin dashboard.",
     status: "live",
-    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Express', 'MongoDB', '+5 more'],
+    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Express', 'MongoDB'],
     liveUrl: "https://www.ductdaddykc.com/blog",
     githubUrl: "https://github.com/flowz0/dd-platform"
   },
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     title: "HVAC Blog Content Management System",
     desc: "Designed and built a full-stack CMS for an HVAC blog. Enabling efficient content creation, editing, and publishing through a custom admin dashboard.",
     status: "live",
-    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Express', 'MongoDB', '+5 more'],
+    techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Express', 'MongoDB'],
     liveUrl: "https://www.ductdaddykc.com/blog",
     githubUrl: "https://github.com/flowz0/dd-platform"
   },
