@@ -10,7 +10,7 @@ export default function ProjectCard() {
         <h3 className="text-h6 font-bold text-brand950">
           HVAC Blog Content Management System
         </h3>
-        <ProjectStatus />
+        <ProjectStatus status="building" />
       </div>
       <p className="mt-2 text-p text-brand800">
         Designed and built a full-stack CMS for an HVAC blog. Enabling efficient content creation, editing, and publishing through a custom admin dashboard.
