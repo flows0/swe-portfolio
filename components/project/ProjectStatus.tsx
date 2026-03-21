@@ -1,7 +1,8 @@
+import type { ProjectStatusValue } from "@/types/project";
 import type { IconType } from "react-icons";
 import { LuArchive, LuCircleDotDashed, LuRadio } from "react-icons/lu";
 
-export type ProjectStatusValue = "building" | "live" | "archived";
+export type { ProjectStatusValue };
 
 const STATUS: Record<
   ProjectStatusValue,
