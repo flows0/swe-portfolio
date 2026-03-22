@@ -7,7 +7,7 @@ export default function Hero() {
       <h1 className="font-bold text-h3 text-center bg-linear-to-b bg-clip-text text-transparent from-brand950 to-[#51f0e3] from-30% to-70% sm:text-h1 md:from-40% md:to-70%">
         Billy Flowers
       </h1>
-      <h2 className="text-brand950 font-bold text-h6 text-center mt-4">
+      <h2 className="text-primary font-bold text-h6 text-center mt-4">
         Software Engineer
       </h2>
       {/* Buttons */}
