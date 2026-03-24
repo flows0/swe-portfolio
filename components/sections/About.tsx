@@ -3,8 +3,29 @@ import SectionContainer from "../layout/SectionContainer";
 import Link from "next/link";
 import AboutCard from "../about/AboutCard";
 import { about } from "@/data/about";
+import { IconType } from "react-icons";
+
+type SocialsType = {
+  href: string;
+  Icon: IconType;
+};
 
 export default function About() {
+  const socials: SocialsType[] = [
+    {
+      href: "mailto:billylflowers@gmail.com",
+      Icon: BiSolidInbox
+    },
+    {
+      href: "https://github.com/flowz0",
+      Icon: BiLogoGithub
+    },
+    {
+      href: "https://www.linkedin.com/in/billyflowers/",
+      Icon: BiLogoLinkedin
+    },
+  ];
+
   return (
     <SectionContainer id="about">
       <div>
@@ -20,27 +41,16 @@ export default function About() {
           <div className="mt-8 lg:mt-16">
             {/* socials */}
             <div className="flex items-center gap-x-4">
-              <Link
-                href="https://www.linkedin.com/in/billyflowers/"
-                target="_blank"
-                className="p-2 rounded-lg border bg-brand200 text-brand600 border-brand300"
-              >
-                <BiLogoLinkedin className="size-8" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/billyflowers/"
-                target="_blank"
-                className="p-2 rounded-lg border bg-brand200 text-brand600 border-brand300"
-              >
-                <BiLogoGithub className="size-8" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/billyflowers/"
-                target="_blank"
-                className="p-2 rounded-lg border bg-brand200 text-brand600 border-brand300"
-              >
-                <BiSolidInbox className="size-8" />
-              </Link>
+              {socials.map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  className="p-2 rounded-lg border transition-colors duration-300 ease-in-out bg-brand200/40 text-brand600 border-brand200 hover:bg-brand200 hover:text-brand800 hover:border-brand300"
+                >
+                  <social.Icon className="size-8" />
+                </Link>
+              ))}
             </div>
           </div>
         </div>
