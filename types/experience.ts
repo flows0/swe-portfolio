@@ -5,4 +5,5 @@ export type ExperienceCardProps = {
   summary: string;
   tags: string[];
   leftCol?: boolean;
+  isActive?: boolean;
 }
