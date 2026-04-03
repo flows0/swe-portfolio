@@ -7,7 +7,7 @@ export const experiences: ExperienceCardProps[] = [
       date: "May 2025 - Present",
       summary:
         "Developed a full-stack field service management platform supporting scheduling, dispatching, payments, and CRM using Next.js, Node.js, and PostgreSQL. Streamlined operations by replacing multiple third-party tools, saving $5K annually and improving workflow coordination.",
-      tags: ["Expres", "Next.js", "PostgreSQL", "System Design"],
+      tags: ["Express", "Next.js", "PostgreSQL", "System Design"],
     },
     {
       title: "Full Stack Software Engineer",
@@ -18,7 +18,7 @@ export const experiences: ExperienceCardProps[] = [
       tags: ["CMS", "Next.js", "MongoDB", "Express"],
     },
     {
-      title: "Software Engineer Intern",
+      title: "Frontend Software Engineer Intern",
       company: "Bay Valley Tech",
       date: "Mar 2024 - Sep 2024",
       summary:
