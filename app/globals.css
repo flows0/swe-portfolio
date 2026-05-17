@@ -38,8 +38,29 @@
   --text-small--line-height: 21px;
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
-  background: #1A191A;
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  background-color: #1A191A;
   color: #F2F2F3;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.055) 1px, transparent 0);
+  background-size: 180px 180px, 32px 32px;
+  background-blend-mode: soft-light, normal;
+  opacity: 0.01;
 }
