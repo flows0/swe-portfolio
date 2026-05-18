@@ -13,7 +13,7 @@ export default function ProjectCard({
   githubUrl
 }: Project) {
   return (
-    <div className="px-4 py-4 rounded-2xl border bg-brand100 border-brand200">
+    <div className="px-4 py-4 rounded-2xl border bg-brand200/10 border-brand200">
       <div className="flex flex-col justify-between h-full">
         <div>
           <div className="flex items-start justify-between gap-x-1">
