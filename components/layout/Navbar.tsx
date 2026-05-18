@@ -78,7 +78,7 @@ export default function Navbar() {
       <nav ref={navRef} className="fixed max-w-7xl mx-auto h-20 z-50 left-4 right-4 top-4 px-6 rounded-2xl border backdrop-blur-lg shadow-2xl bg-brand100/90 border-brand200 shadow-brand100">
         <div className="flex items-center justify-between h-full">
           <Link href="/#home" className="text-primary text-h6 font-bold p-1 rounded-lg focus:outline-primary">
-            {"<flowz />"}
+            Billy Flowers
           </Link>
 
           {/* Desktop: Nav Links */}
