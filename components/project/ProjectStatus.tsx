@@ -11,17 +11,17 @@ const STATUS: Record<
   building: {
     label: "Building",
     Icon: LuCircleDotDashed,
-    className: "text-building bg-brand100 border-building/40",
+    className: "text-building bg-brand200/10 border-building/40",
   },
   live: {
     label: "Live",
     Icon: LuRadio,
-    className: "text-primary bg-brand100 border-primary/40",
+    className: "text-primary bg-brand100/10 border-primary/40",
   },
   archived: {
     label: "Archived",
     Icon: LuArchive,
-    className: "text-brand600 bg-brand100 border-brand300",
+    className: "text-brand600 bg-brand100/10 border-brand300",
   },
 };
 
