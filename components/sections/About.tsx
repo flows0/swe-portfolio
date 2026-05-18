@@ -48,7 +48,7 @@ export default function About() {
                   key={index}
                   href={social.href}
                   target="_blank"
-                  className={`${social.label ? "flex items-center gap-x-2 px-4 py-2 p-2 rounded-full border transition-colors duration-300 ease-in-out bg-brand200/40 text-brand600 border-brand200 hover:bg-brand200 hover:text-brand800 hover:border-brand300" : "p-2 rounded-full border transition-colors duration-300 ease-in-out bg-brand200/40 text-brand600 border-brand200 hover:bg-brand200 hover:text-brand800 hover:border-brand300"}`}
+                  className={`${social.label ? "flex items-center gap-x-2 px-4 py-2 p-2 rounded-full border transition-colors duration-300 ease-in-out bg-brand200/20 text-brand600 border-brand200 hover:bg-brand200 hover:text-brand800 hover:border-brand300" : "p-2 rounded-full border transition-colors duration-300 ease-in-out bg-brand200/20 text-brand600 border-brand200 hover:bg-brand200 hover:text-brand800 hover:border-brand300"}`}
                 >
                   <social.Icon className="size-6" />
                   <span className="text-p">{social.label}</span>
