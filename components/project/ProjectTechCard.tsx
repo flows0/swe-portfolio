@@ -9,9 +9,9 @@ const baseStyle = "px-3 py-1 text-small rounded-full w-fit border"
 
 const variantStyles: Record<TechCardVariant, string> = {
   primary:
-    "text-brand800 bg-brand200 border-brand300",
+    "text-brand800 bg-brand200/40 border-brand200",
   secondary:
-    "text-brand400 bg-brand100 border-brand200"
+    "text-brand400 bg-brand200/20 border-brand200/40"
 };
 
 export default function ProjectTechCard({
