@@ -10,7 +10,7 @@ export const about: AboutCardProps[] = [
     textColor: "text-primary"
   },
   {
-    title: "20+ Projects",
+    title: "16+ Projects",
     desc: "Solutions Built",
     Icon: LuFolderKanban,
     bgColor: "bg-[#DAB1F8]/20",
