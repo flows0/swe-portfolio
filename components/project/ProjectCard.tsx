@@ -31,7 +31,7 @@ export default function ProjectCard({
           <hr className="border-t-brand200 mt-6" />
           <div className="mt-4 flex items-center justify-end gap-x-2">
             {liveUrl && (
-              <Button href={liveUrl} target="_blank" rounded="full" size="sm">
+              <Button href={liveUrl} target="_blank" rounded="full" size="sm" className="text-p">
                 <div>
                   <LuPlay className="size-4" />
                 </div>
@@ -39,7 +39,7 @@ export default function ProjectCard({
               </Button>
             )}
             {githubUrl && (
-              <Button href={githubUrl} target="_blank" variant="secondary" rounded="full" size="sm">
+              <Button href={githubUrl} target="_blank" variant="secondary" rounded="full" size="sm" className="text-p">
                 <div>
                   <LuGithub className="size-4" />
                 </div>
