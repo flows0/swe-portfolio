@@ -75,7 +75,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav ref={navRef} className="fixed max-w-7xl mx-auto h-20 z-50 left-4 right-4 top-4 px-6 rounded-2xl border backdrop-blur-lg shadow-2xl bg-brand100/90 border-brand200 shadow-brand100">
+      <nav ref={navRef} className="fixed max-w-7xl mx-auto h-20 z-50 left-4 right-4 top-4 pl-8 pr-8 lg:pr-4 rounded-full border backdrop-blur-lg shadow-2xl bg-brand100/80 border-brand200 shadow-brand100">
         <div className="flex items-center justify-between h-full">
           <Link href="/#home" className="text-primary text-h6 font-bold p-1 rounded-lg focus:outline-primary">
             Billy Flowers
@@ -97,10 +97,10 @@ export default function Navbar() {
                     linkRefs.current[index] = el;
                   }}
                   href={href}
-                  className={`relative z-10 text-p px-3 py-2 rounded-xl transition-colors duration-300 ease-in-out ${
+                  className={`relative z-10 text-p px-3 py-2 rounded-2xl transition-colors duration-300 ease-in-out ${
                     isActive
                       ? "text-primary"
-                      : "text-brand400 hover:bg-brand200/50 hover:text-brand600"
+                      : "text-brand600 hover:bg-brand200/40 hover:text-brand800"
                   }`}
                 >
                   {label}
@@ -112,7 +112,7 @@ export default function Navbar() {
           {/* Desktop: Other Links */}
           <div className="hidden lg:flex">
             <div>
-              <Button href="/files/billy-flowers-resume.pdf" target="_blank" variant="secondary">
+              <Button href="/files/billy-flowers-resume.pdf" target="_blank" variant="secondary" rounded="full">
                 <div>
                   <LuFileText className="size-6" />
                 </div>
@@ -125,7 +125,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="p-1 rounded-lg transition-colors text-brand600 md:hidden hover:bg-brand200/40 focus:outline-primary"
+            className="transition-colors text-brand600 md:hidden hover:bg-brand200/40 focus:outline-primary"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
           >
