@@ -10,19 +10,19 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: "Backend",
-    skills: ["Express", "Node.js", "Python", "GraphQL", "REST APIs"],
+    skills: ["Express", "Node.js", "Prisma ORM", "REST APIs", "Authentication"],
     Icon: LuServer,
     color: "#C3B1F8"
   },
   {
     title: "Database",
-    skills: ["PostgreSQL", "MongoDB", "MySQL", "Prisma ORM", "Redis"],
+    skills: ["PostgreSQL", "MongoDB", "MySQL", "Database Design", "Redis"],
     Icon: LuDatabase,
     color: "#F8B1B1"
   },
   {
     title: "Languages",
-    skills: ["JavaScript", "TypeScript", "Python", "Lua", "SQL", "C#"],
+    skills: ["TypeScript", "JavaScript (ES6+)", "Python", "Lua", "SQL", "C#"],
     Icon: LuCode,
     color: "#F8B1E3"
   },
