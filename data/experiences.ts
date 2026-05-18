@@ -14,7 +14,7 @@ export const experiences: ExperienceCardProps[] = [
       company: "Duct Daddy",
       date: "Nov 2024 - Jul 2025",
       summary:
-        "Built a custom CMS and marketing website with Next.js and MongoDB, enabling scalable content management. Integrated booking systems that helped drive revenue growth from $10K to $40K in 6 months.",
+        "Built a custom CMS and marketing website enabling scalable content management. Integrated booking systems that helped drive revenue growth 300% in 6 months.",
       tags: ["TypeScript", "Next.js", "MongoDB", "Express", "Node.js"],
     },
     {
