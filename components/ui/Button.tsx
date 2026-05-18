@@ -15,7 +15,7 @@ type ButtonProps = {
   className?: string;
 };
 
-const baseStyle = "flex items-center justify-center text-center gap-x-2 border cursor-pointer transition-colors duration-300 ease-in-out";
+const baseStyle = "flex items-center justify-center text-center gap-x-2 text-p border cursor-pointer transition-colors duration-300 ease-in-out";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
@@ -30,8 +30,8 @@ const borderStyle: Record<RoundedVariant, string> = {
 };
 
 const sizeStyle: Record<SizeVariant, string> = {
-  sm: "py-1 px-3",
-  md: "py-3 px-4"
+  sm: "py-2 px-3",
+  md: "py-3 px-5"
 };
 
 export default function Button({
