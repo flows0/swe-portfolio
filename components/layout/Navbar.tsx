@@ -97,7 +97,7 @@ export default function Navbar() {
                     linkRefs.current[index] = el;
                   }}
                   href={href}
-                  className={`relative z-10 text-p px-3 py-2 rounded-2xl transition-colors duration-300 ease-in-out ${
+                  className={`relative z-10 text-p px-3 py-2 rounded-full transition-colors duration-300 ease-in-out ${
                     isActive
                       ? "text-primary"
                       : "text-brand600 hover:bg-brand200/40 hover:text-brand800"
