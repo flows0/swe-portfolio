@@ -35,7 +35,7 @@ export default function About() {
           About Me
         </h2>
       </div>
-      <div className="grid grid-cols-1 mt-4 md:gap-x-8 lg:grid-cols-2 lg:mt-8">
+      <div className="grid grid-cols-1 mt-6 md:gap-x-8 lg:grid-cols-2 lg:mt-12">
         <div>
           <p className="text-p text-brand800">I&apos;m a full-stack software engineer with experience building web applications, internal tools, APIs, and business platforms. I enjoy turning complex ideas into simple products that people enjoy using.</p>
           <p className="text-p mt-2 text-brand800 lg:mt-4">Most of my work focuses on backend systems, dashboards, and workflow tools that help businesses operate more efficiently and make better use of their data. I&apos;m really interested in system design, product development, and building software that solves practical problems.</p>
