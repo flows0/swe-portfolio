@@ -1,4 +1,5 @@
 import { ExperienceCardProps } from "@/types/experience";
+import Image from "next/image";
 import { LuBuilding2, LuCalendar } from "react-icons/lu";
 
 export default function ExperienceCard({
@@ -8,6 +9,7 @@ export default function ExperienceCard({
   summary,
   tags,
   leftCol,
+  img,
   isActive = false,
 }: ExperienceCardProps) {
   return (
@@ -19,8 +21,8 @@ export default function ExperienceCard({
               }`}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-x-2">
-              <h3 className="text-h6 font-semibold text-brand950">{title}</h3>
-              <div className="mt-2 flex items-center gap-x-1 text-brand400 md:mt-0">
+              <h3 className="text-h6 font-semibold text-brand950 lg:text-h5">{title}</h3>
+              <div className="mt-2 flex items-center gap-x-1 text-brand400 md:mt-0 lg:w-1/3 lg:justify-end">
                 <div className="md:hidden">
                   <LuCalendar className="size-4" />
                 </div>
@@ -28,17 +30,28 @@ export default function ExperienceCard({
                 </p>{date}
               </div>
             </div>
-            <div className="hidden items-center gap-x-1 text-primary md:flex md:mt-2">
+            <div className="hidden items-center gap-x-3 text-primary md:flex md:mt-2">
               <div>
-                <LuBuilding2 className="size-6" />
+                {img ? (
+                  <Image
+                    src={img}
+                    alt={`${company} logo`}
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 object-contain rounded-full"
+                  />
+                ) : (
+                  <LuBuilding2 className="size-6" />
+                )}
               </div>
-              <p className="text-sm">
-              </p>{company}
+              <p className="text-p font-bold text-brand800 lg:text-h6">
+                {company}
+              </p>
             </div>
             <p className="mt-4 text-p line-clamp-5 text-brand600">
               {summary}
             </p>
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-6 flex flex-wrap gap-2">
               {tags.map((tag) => (
                 <span
                   key={tag}
