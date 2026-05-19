@@ -28,7 +28,7 @@ export default function Footer() {
           <ul className="mt-4 flex flex-col gap-y-2">
             {contactLinks.map((link, index) => (
               <li key={index}>
-                <Button href={link.href} target="_blank" className="w-fit" variant={link.primary ? "primary" : "secondary"} rounded="full">
+                <Button href={link.href} target="_blank" className="w-fit" variant={link.primary ? "primary" : "secondary"} size="sm" rounded="full">
                   <div>
                     <link.Icon className="size-6" />
                   </div>
