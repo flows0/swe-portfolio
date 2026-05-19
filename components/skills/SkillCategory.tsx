@@ -8,7 +8,7 @@ export default function SkillCategory({
   color
 }: SkillCategory) {
   return (
-    <div className="flex h-full min-h-0 flex-col rounded-2xl bg-brand200/10 px-5 py-4 lg:px-6 lg:py-5">
+    <div className="flex h-full min-h-0 flex-col rounded-2xl bg-brand200/10 px-6 py-5 lg:px-7 lg:py-6">
       <div className="flex shrink-0 items-center gap-x-4">
         <div style={{backgroundColor: color}} className="w-fit p-2 rounded-lg text-brand100">
           <Icon className="size-8" />
