@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type ExperienceCardProps = {
   title: string;
   company: string;
@@ -6,4 +8,5 @@ export type ExperienceCardProps = {
   tags: string[];
   leftCol?: boolean;
   isActive?: boolean;
+  img?: StaticImageData;
 }
