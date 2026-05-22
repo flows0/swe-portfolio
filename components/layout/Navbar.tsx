@@ -75,7 +75,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav ref={navRef} className="fixed max-w-7xl mx-auto h-18 z-50 left-4 right-4 top-4 pl-8 pr-8 lg:pr-4 rounded-full border backdrop-blur-lg shadow-2xl bg-brand100/80 border-brand200 shadow-brand100">
+      <nav ref={navRef} className="fixed max-w-7xl mx-auto h-18 z-50 left-4 right-4 top-4 pl-8 pr-8 rounded-full border backdrop-blur-lg shadow-2xl bg-brand100/80 border-brand200 shadow-brand100 md:pr-4">
         <div className="flex items-center justify-between h-full">
           <Link href="/#home" className="text-brand950 text-h6 font-bold p-1 rounded-lg focus:outline-primary">
             Billy Flowers
@@ -97,7 +97,7 @@ export default function Navbar() {
                     linkRefs.current[index] = el;
                   }}
                   href={href}
-                  className={`relative z-10 text-p px-3 py-2 rounded-full transition-colors duration-300 ease-in-out ${
+                  className={`relative z-10 text-p px-4 py-2 rounded-full transition-colors duration-300 ease-in-out ${
                     isActive
                       ? "text-primary"
                       : "text-brand600 hover:bg-brand200/40 hover:text-brand800"
@@ -114,7 +114,7 @@ export default function Navbar() {
             <div>
               <Button href="/files/billy-flowers-resume.pdf" target="_blank" variant="secondary" size="sm" rounded="full">
                 <div>
-                  <LuFileText className="size-6" />
+                  <LuFileText className="size-6.5" />
                 </div>
                 <span className="text-p">View CV</span>
               </Button>
