@@ -42,7 +42,7 @@ export default function ExperienceCard({
                 {company}
               </p>
             </div>
-            <p className="mt-4 text-p line-clamp-5 text-brand600">
+            <p className="mt-4 text-p line-clamp-8 text-brand600">
               {summary}
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
