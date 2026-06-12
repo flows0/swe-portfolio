@@ -9,7 +9,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Billy Flowers - Software Engineer Portfolio",
+  title: "Billy's Software Engineer Portfolio",
   description: "Software engineer specializing in modern web solutions that power companies and impact the world.",
 };
 
