@@ -125,7 +125,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="transition-colors text-brand600 md:hidden hover:bg-brand200/40 focus:outline-primary"
+            className="cursor-pointer transition-colors text-brand600 md:hidden focus:outline-primary"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
           >
