@@ -17,7 +17,7 @@ export default function Hero() {
           </h2>
           {/* Buttons */}
           <div className="mt-8 flex flex-col items-center justify-center gap-y-4 sm:flex-row sm:gap-x-4">
-            <Button href="/#projects" rounded="full">
+            <Button href="/#projects" rounded="full" className="">
               Explore Projects
               <HiArrowDown className="size-5" />
             </Button>
@@ -28,7 +28,10 @@ export default function Hero() {
         </div>
         {/* Arrow */}
         <div className="flex flex-col items-center pb-12">
-          <p className="text-brand400 uppercase">SCROLL</p>
+          <p className="text-brand400 uppercase">
+            <span className="lg:hidden">SWIPE</span>
+            <span className="hidden lg:inline">SCROLL</span>
+          </p>
           <div className="mt-4">
             <LuChevronDown className="text-primary size-8 transition-transform animate-bounce ease-in-out duration-300" />
           </div>
