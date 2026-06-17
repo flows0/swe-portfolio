@@ -45,7 +45,7 @@ export default function Footer() {
           <h3 className="text-h6 font-bold text-brand950">
             Billy Flowers
           </h3>
-          <p className="mt-4 text-p max-w-104 text-brand800">
+          <p className="mt-4 text-p max-w-104 text-brand600">
             Designed with Figma and coded in Visual Studio Code. Built with Next.js and Tailwind CSS.
           </p>
           <p className="mt-20 text-p text-brand400">
