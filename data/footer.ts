@@ -31,8 +31,8 @@ export const contactLinks: ContactLinkType[] = [
     Icon: BiSolidInbox
   },
   {
-    label: "github.com/bflows",
-    href: "https://github.com/bflows",
+    label: "github.com/flows0",
+    href: "https://github.com/flows0",
     Icon: BiLogoGithub,
     primary: true
   },

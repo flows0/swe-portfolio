@@ -8,7 +8,7 @@ export const projects: Project[] = [
     status: "live",
     techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel', 'Figma'],
     liveUrl: "https://billyf-portfolio.vercel.app/",
-    githubUrl: "https://github.com/flowz0/swe-portfolio"
+    githubUrl: "https://github.com/flows0/swe-portfolio"
   },
   {
     id: 1,
@@ -17,7 +17,7 @@ export const projects: Project[] = [
     status: "live",
     techStack: ['Node.js', 'Express', 'MongoDB', 'Next.js', 'Axios', 'Tailwind CSS'],
     liveUrl: "https://www.ductdaddykc.com/blog",
-    githubUrl: "https://github.com/flowz0/dd-platform"
+    githubUrl: "https://github.com/flows0/dd-platform"
   },
   {
     id: 2,
@@ -26,6 +26,6 @@ export const projects: Project[] = [
     status: "live",
     techStack: ['Express', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Stripe API', 'Twilio API',],
     liveUrl: "https://www.builtbydaddy.com/",
-    githubUrl: "https://github.com/flowz0/d-enterprise-suite"
+    githubUrl: "https://github.com/flows0/d-enterprise-suite"
   },
 ];

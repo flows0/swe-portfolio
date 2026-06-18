@@ -14,7 +14,7 @@ type SocialsType = {
 export default function About() {
   const socials: SocialsType[] = [
     {
-      href: "https://github.com/bflows",
+      href: "https://github.com/flows0",
       Icon: BiLogoGithub
     },
     {

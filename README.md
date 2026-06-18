@@ -4,7 +4,7 @@ Personal portfolio website built with **Next.js (App Router)**, **TypeScript**, 
 
 - **Live site**: [billyf-portfolio.vercel.app/](https://billyf-portfolio.vercel.app/)
 - **Resume**: `public/files/billy-flowers-resume.pdf`
-- **Contact**: [LinkedIn](https://www.linkedin.com/in/billyflowers) · [GitHub](https://github.com/flowz0) · `billylflowers@gmail.com` 
+- **Contact**: [LinkedIn](https://www.linkedin.com/in/billyflowers) · [GitHub](https://github.com/flows0) · `billylflowers@gmail.com` 
 
 ## Highlights
 
