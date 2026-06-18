@@ -132,7 +132,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps
               </div>
               <div>
                 <Link
-                  href="https://github.com/bflows"
+                  href="https://github.com/flows0"
                   passHref
                   target="_blank"
                   className="p-3 rounded-full flex items-center gap-x-2 w-fit border bg-brand200/40 text-brand600 border-brand200"
