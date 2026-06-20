@@ -4,15 +4,16 @@ import Link from "next/link";
 import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 import { LuFileText } from "react-icons/lu";
 import { AnimatePresence, motion, type Variants } from "motion/react";
-import { RefObject, useMemo } from "react";
+import { RefObject } from "react";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
 import { navLinks } from "./Navbar";
-import { ACTIVE_SECTION_OFFSET_PX, getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
+import { getSectionIdFromHref } from "@/hooks/useScrollSpy";
 
 type MobileMenuProps = {
   isOpen: boolean;
   onClose: () => void;
   menuRef: RefObject<HTMLDivElement | null>;
+  activeSectionId: string | null;
 };
 
 const CONTAINER_DURATION = 0.15;
@@ -63,15 +64,8 @@ const contentVariants: Variants = {
   },
 };
 
-export default function MobileMenu({ isOpen, onClose, menuRef }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose, menuRef, activeSectionId }: MobileMenuProps) {
   useLockBodyScroll(isOpen);
-
-  const sectionHrefs = useMemo(() => navLinks.map(({ href }) => href), []);
-  const { activeSectionId } = useScrollSpy({
-    sectionHrefs,
-    activeSectionOffsetPx: ACTIVE_SECTION_OFFSET_PX,
-    enabled: isOpen,
-  });
 
   return (
     <AnimatePresence>

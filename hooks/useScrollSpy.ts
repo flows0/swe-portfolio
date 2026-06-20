@@ -4,10 +4,39 @@ import { useEffect, useMemo, useState } from "react";
 
 /** Shared across hook instances — suppresses intermediate highlights while scrolling to a clicked section. */
 let navigationLockId: string | null = null;
+let navigationLockFromScrollY = 0;
+let navigationLockTargetScrollY = 0;
+let navigationLockTimeoutId: number | null = null;
 let navClickListenerAttached = false;
 const registeredSectionIds: { current: string[] } = { current: [] };
 
-function attachNavClickListener(sectionIds: string[]) {
+const NAVIGATION_LOCK_MAX_MS = 1500;
+
+function clearNavigationLockTimeout() {
+  if (navigationLockTimeoutId !== null) {
+    window.clearTimeout(navigationLockTimeoutId);
+    navigationLockTimeoutId = null;
+  }
+}
+
+function setNavigationLock(id: string, activeSectionOffsetPx: number) {
+  navigationLockId = id;
+  navigationLockFromScrollY = window.scrollY;
+
+  const el = document.getElementById(id);
+  navigationLockTargetScrollY = el
+    ? el.getBoundingClientRect().top + window.scrollY - activeSectionOffsetPx
+    : navigationLockFromScrollY;
+
+  clearNavigationLockTimeout();
+  navigationLockTimeoutId = window.setTimeout(() => {
+    navigationLockId = null;
+    navigationLockTimeoutId = null;
+    window.dispatchEvent(new Event("scroll"));
+  }, NAVIGATION_LOCK_MAX_MS);
+}
+
+function attachNavClickListener(sectionIds: string[], activeSectionOffsetPx: number) {
   registeredSectionIds.current = sectionIds;
   if (navClickListenerAttached) return;
   navClickListenerAttached = true;
@@ -17,7 +46,7 @@ function attachNavClickListener(sectionIds: string[]) {
 
   const lockFromHref = (href: string | null) => {
     const id = href ? getSectionIdFromHref(href) : null;
-    if (isSectionId(id)) navigationLockId = id;
+    if (isSectionId(id)) setNavigationLock(id, activeSectionOffsetPx);
   };
 
   document.addEventListener(
@@ -34,7 +63,7 @@ function attachNavClickListener(sectionIds: string[]) {
     const hashId = window.location.hash
       ? decodeURIComponent(window.location.hash.slice(1))
       : null;
-    if (isSectionId(hashId)) navigationLockId = hashId;
+    if (isSectionId(hashId)) setNavigationLock(hashId, activeSectionOffsetPx);
   });
 }
 
@@ -42,8 +71,31 @@ function hasReachedLockedSection(
   lockedId: string,
   currentId: string | null,
   sectionIds: string[],
+  activeSectionOffsetPx: number,
 ): boolean {
   if (currentId === lockedId) return true;
+
+  const lockedEl = document.getElementById(lockedId);
+  if (lockedEl) {
+    const top = lockedEl.getBoundingClientRect().top;
+    if (top - activeSectionOffsetPx <= 0 && lockedEl.getBoundingClientRect().bottom > 0) {
+      return true;
+    }
+  }
+
+  const currentY = window.scrollY;
+  const scrollingDown = navigationLockTargetScrollY >= navigationLockFromScrollY;
+  const arrived =
+    Math.abs(currentY - navigationLockTargetScrollY) <= activeSectionOffsetPx ||
+    (scrollingDown
+      ? currentY >= navigationLockTargetScrollY - 50
+      : currentY <= navigationLockTargetScrollY + 50);
+  if (arrived) return true;
+
+  const lockedIndex = sectionIds.indexOf(lockedId);
+  const currentIndex = currentId ? sectionIds.indexOf(currentId) : -1;
+  if (currentIndex > lockedIndex && scrollingDown) return true;
+  if (currentIndex !== -1 && currentIndex < lockedIndex && !scrollingDown) return true;
 
   const lastId = sectionIds[sectionIds.length - 1];
   if (lockedId !== lastId) return false;
@@ -91,8 +143,8 @@ export function useScrollSpy({
   const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
 
   useEffect(() => {
-    attachNavClickListener(sectionIds);
-  }, [sectionIds]);
+    attachNavClickListener(sectionIds, activeSectionOffsetPx);
+  }, [sectionIds, activeSectionOffsetPx]);
 
   useEffect(() => {
     if (!enabled) return;
@@ -124,9 +176,10 @@ export function useScrollSpy({
 
       const lockedId = navigationLockId;
       if (lockedId && sectionIds.includes(lockedId)) {
-        if (hasReachedLockedSection(lockedId, currentId, sectionIds)) {
+        if (hasReachedLockedSection(lockedId, currentId, sectionIds, activeSectionOffsetPx)) {
+          clearNavigationLockTimeout();
           navigationLockId = null;
-          setActiveSectionId((prev) => (prev === lockedId ? prev : lockedId));
+          setActiveSectionId((prev) => (prev === currentId ? prev : currentId));
         }
         return;
       }
@@ -143,12 +196,7 @@ export function useScrollSpy({
     };
 
     const initFromHashOrScroll = () => {
-      const hashId = window.location.hash ? decodeURIComponent(window.location.hash.slice(1)) : null;
-      if (hashId && sectionIds.includes(hashId) && document.getElementById(hashId)) {
-        setActiveSectionId(hashId);
-      } else {
-        computeActiveSection();
-      }
+      computeActiveSection();
     };
 
     initFromHashOrScroll();

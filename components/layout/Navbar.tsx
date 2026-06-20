@@ -142,6 +142,7 @@ export default function Navbar() {
         isOpen={menuOpen}
         onClose={() => setMenuOpen(false)}
         menuRef={menuRef}
+        activeSectionId={activeSectionId}
       />
     </>
   );
