@@ -1,17 +1,10 @@
 ## Billy Flowers — Software Engineer Portfolio
 
-Personal portfolio website built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**. It’s designed to be fast, responsive, and easy to update—most content lives in `data/` so you can ship changes without touching UI components.
+Personal portfolio website built with **Next.js**, **TypeScript**, and **Tailwind CSS**. It’s designed to be fast, responsive, and easy to update. Most content lives in `data/` to easily ship changes without touching UI components.
 
 - **Live site**: [billyf-portfolio.vercel.app/](https://billyf-portfolio.vercel.app/)
 - **Resume**: `public/files/billy-flowers-resume.pdf`
 - **Contact**: [LinkedIn](https://www.linkedin.com/in/billyflowers) · [GitHub](https://github.com/flows0) · `billylflowers@gmail.com` 
-
-## Highlights
-
-- **Data-driven content**: update projects/experience/skills via `data/*.ts`
-- **Component-based sections**: `Hero`, `Projects`, `Skills`, `About`, `Experience`
-- **Modern UI stack**: Tailwind v4, icon system via `react-icons`
-- **Production-ready scripts**: `dev`, `build`, `start`, `lint`
 
 ## Tech stack
 
@@ -25,23 +18,25 @@ Personal portfolio website built with **Next.js (App Router)**, **TypeScript**, 
 
 The homepage is composed in `app/page.tsx`:
 
-- **Hero**: name, role, quick links (projects + resume)
-- **Featured Projects**
+- **Navbar**
+- **Hero**
+- **Projects**
 - **Skills**
 - **About**
 - **Experience**
+- **Footer**
 
 ## Updating content
 
 Most edits are simple data changes:
 
+- **Nav Links**: `components/layout/Navbar.tsx`
 - **Projects**: `data/projects.ts`
 - **Skills**: `data/skills.ts`
-- **About cards**: `data/about.ts`
 - **Experience**: `data/experiences.ts`
 - **Footer links**: `data/footer.ts`
 
-To update your resume, replace:
+To update resume replace:
 
 - `public/files/billy-flowers-resume.pdf`
 
@@ -81,10 +76,8 @@ npm run lint    # run eslint
   - **Build Command**: `next build`
   - **Output**: Next.js default
 
-## Repository notes
-
-- This is a personal portfolio codebase, so I’m not currently accepting contributions.
-
 ## License
 
-No license is provided. If you want others to reuse parts of this repo, add an appropriate license (MIT, Apache-2.0, etc.).
+Copyright © 2026 Billy Flowers. All rights reserved.
+
+This repository is provided for portfolio purposes only. No license is granted to copy, modify, distribute, or reuse any part of this project including code, design, content, or assets without prior written permission.
