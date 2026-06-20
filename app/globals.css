@@ -8,7 +8,13 @@
   --animate-pulse2: pulse2 2s ease-in-out infinite;
 
   @keyframes pulse2 {
+    0% {
+      opacity: 0.6;
+    }
     50% {
+      opacity: 1.0;
+    }
+    100% {
       opacity: 0.6;
     }
   }
