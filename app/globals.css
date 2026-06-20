@@ -5,7 +5,7 @@
 }
 
 @theme {
-  --animate-pulse2: pulse2 1s ease-in-out infinite;
+  --animate-pulse2: pulse2 2s ease-in-out infinite;
 
   @keyframes pulse2 {
     50% {
