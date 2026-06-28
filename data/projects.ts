@@ -3,7 +3,7 @@ import { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     id: 0,
-    title: "Software Engineer Portfolio",
+    title: "Software Engineer Portfolio Website",
     desc: "Created my new portfolio using modern technologies like Next.js and Tailwind CSS to showcase my skills and experience.",
     status: "live",
     techStack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel', 'Figma'],
@@ -12,7 +12,7 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    title: "Content Management System",
+    title: "Blog Content Management System",
     desc: "Built a business website, CMS, and online booking system for an HVAC company which led to a 300% revenue increase within six months.",
     status: "live",
     techStack: ['Node.js', 'Express', 'MongoDB', 'Next.js', 'Axios', 'Tailwind CSS'],
@@ -21,8 +21,8 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Field Service Platform",
-    desc: "Enterprise suite featuring booking, dispatching, invoicing, payments, reporting, payroll tracking, and automated customer communication.",
+    title: "Field Service Enterprise Suite",
+    desc: "Unified platform featuring booking, dispatching, invoicing, payments, reporting, payroll tracking, and automated customer communication.",
     status: "live",
     techStack: ['Express', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Next.js', 'Redux', 'Axios', 'Tailwind CSS', 'Stripe API', 'Twilio API',],
     liveUrl: "https://www.builtbydaddy.com/",
