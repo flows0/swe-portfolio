@@ -56,6 +56,7 @@ export default function ExperienceLogo({ src, alt }: ExperienceLogoProps) {
         alt={alt}
         width={32}
         height={32}
+        draggable="false"
         className={`h-8 w-8 object-contain rounded-full transition-opacity duration-300 ease-out ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
