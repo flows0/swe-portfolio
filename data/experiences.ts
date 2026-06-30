@@ -1,8 +1,8 @@
 import { ExperienceCardProps } from "@/types/experience";
 
-import LiftMarkLogo from "@/public/assets/liftmark-logo.png";
-import DuctDaddyLogo from "@/public/assets/Duct-Daddy-logo.png";
-import BVTLogo from "@/public/assets/bay_valley_tech_logo.jpg";
+import LiftMarkLogo from "@/public/images/liftmark-logo.png";
+import DuctDaddyLogo from "@/public/images/Duct-Daddy-logo.png";
+import BVTLogo from "@/public/images/bay_valley_tech_logo.jpg";
 
 export const experiences: ExperienceCardProps[] = [
     {
