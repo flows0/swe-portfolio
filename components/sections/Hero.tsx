@@ -33,7 +33,7 @@ export default function Hero() {
         </div>
         {/* Arrow */}
         <div className="flex flex-col items-center pb-12">
-          <p className="text-brand400 uppercase">
+          <p className="text-brand600 uppercase">
             <span className="lg:hidden">SWIPE</span>
             <span className="hidden lg:inline">SCROLL</span>
           </p>
