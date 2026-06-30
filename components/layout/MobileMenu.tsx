@@ -99,9 +99,9 @@ export default function MobileMenu({ isOpen, onClose, menuRef, activeSectionId }
 
             <div className="mt-8 flex items-center flex-wrap gap-2">
               <div>
-                <Link
+                <a
                   href="/files/billy-flowers-resume.pdf"
-                  passHref
+                  rel="noopener noreferrer"
                   target="_blank"
                   className="px-6 py-3 bg-primary/20 text-primary rounded-full flex items-center gap-x-2 w-fit outline-1 outline-primary/40"
                 >
@@ -109,7 +109,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef, activeSectionId }
                     <LuFileText className="size-6" />
                   </div>
                   <span className="text-p">View CV</span>
-                </Link>
+                </a>
               </div>
               <div>
                 <Link

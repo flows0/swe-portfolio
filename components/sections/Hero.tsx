@@ -21,9 +21,14 @@ export default function Hero() {
               Explore Projects
               <HiArrowDown className="size-5" />
             </Button>
-            <Button variant="secondary" href="/files/billy-flowers-resume.pdf" target="_blank" className="lg:hidden" rounded="full">
+            <a
+              href="/files/billy-flowers-resume.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="py-3 px-6 text-p border cursor-pointer transition-colors duration-300 ease-in-out rounded-full bg-brand200/20 text-brand600 border-brand200/80 hover:bg-brand200 hover:text-brand800 hover:border-brand300 lg:hidden"
+            >
               View Resume
-            </Button>
+            </a>
           </div>
         </div>
         {/* Arrow */}

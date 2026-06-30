@@ -6,7 +6,6 @@ import { LuFileText, LuMenu, LuX } from "react-icons/lu";
 import MobileMenu from "./MobileMenu";
 import { useDismissInteraction } from "@/hooks/useDismissInteraction";
 import { ACTIVE_SECTION_OFFSET_PX, getSectionIdFromHref, useScrollSpy } from "@/hooks/useScrollSpy";
-import Button from "../ui/Button";
 
 export const navLinks = [
   { href: "/#home", label: "Home" },
@@ -97,11 +96,10 @@ export default function Navbar() {
                     linkRefs.current[index] = el;
                   }}
                   href={href}
-                  className={`relative z-10 text-p px-4 py-2 rounded-full transition-colors duration-300 ease-in-out ${
-                    isActive
+                  className={`relative z-10 text-p px-4 py-2 rounded-full transition-colors duration-300 ease-in-out ${isActive
                       ? "text-primary"
                       : "text-brand600 hover:bg-brand200/40 hover:text-brand800"
-                  }`}
+                    }`}
                 >
                   {label}
                 </Link>
@@ -112,12 +110,17 @@ export default function Navbar() {
           {/* Desktop: Other Links */}
           <div className="hidden lg:flex">
             <div>
-              <Button href="/files/billy-flowers-resume.pdf" target="_blank" variant="secondary" size="sm" rounded="full">
+              <a
+                href="/files/billy-flowers-resume.pdf"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="py-2 px-4 flex items-center justify-center text-center gap-x-2 text-p border cursor-pointer transition-colors duration-300 ease-in-out rounded-full bg-brand200/20 text-brand600 border-brand200/80 hover:bg-brand200 hover:text-brand800 hover:border-brand300"
+              >
                 <div>
                   <LuFileText className="size-6.5" />
                 </div>
-                <span className="text-p">View CV</span>
-              </Button>
+                View CV
+              </a>
             </div>
           </div>
 
