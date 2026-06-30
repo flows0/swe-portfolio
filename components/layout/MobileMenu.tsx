@@ -97,7 +97,7 @@ export default function MobileMenu({ isOpen, onClose, menuRef, activeSectionId }
               ))}
             </div>
 
-            <div className="mt-8 flex items-center gap-x-2">
+            <div className="mt-8 flex items-center flex-wrap gap-2">
               <div>
                 <Link
                   href="/files/billy-flowers-resume.pdf"
